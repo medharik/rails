@@ -1,0 +1,9 @@
+<%@post.errors.full_messages.each do |e|%>
+<%=e%>
+<%end%>
+<%= form_for(@post) do |f|%>
+Titre : <%=f.text_field :titre%>
+Commentaire : <%=f.text_area :commentaire%>
+
+<%=f.submit "valider" %>
+<%end %>
